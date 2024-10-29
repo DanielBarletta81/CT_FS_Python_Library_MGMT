@@ -6,30 +6,30 @@
   #      4. Search for a book
     #    5. Display all books
 
-class Book:
-  
-    def __init__(self, title, genre, author, date_published, isAvailable):
-        #make private attributes for genre and author
-        self.__genre = genre
-        self.__author = author
-        self.title = title
-        self.date_published = date_published
-        self.isAvailable = isAvailable
+def bookMenu():
+     while True:
+    
+        print("***  Welcome to the Library's Book Menu!  ***")
+        print("\n Menu: ")
+        print("\n 1. Add a Book. ")
+        print("\n 2. Borrow a book. ")
+        print("\n 3. Return a book. ")
+        print("\n 4. Search for a book. ")
+        print("\n 5. Display all Books. ")
+        print("\n 6. Return to Main Menu. ")
 
-#Apply encapsulation principles by defining private attributes 
-# and using getters and setters for necessary data access.
+        choice = int(input("What would you like to do (1-6)? "))
 
-    # getters and setters
-    def get_genre(self):
-        return self.__genre
-
-    def set_genre(self, new_genre):
-        self.__genre = new_genre
-
-    def get_author(self):
-        return self.__author
-
-    def set_author(self, new_author):
-        self.__author = new_author
+        if choice == 4:
+            return
+        elif choice == 1:
+            pass
+        elif choice == 2:
+            pass
+        elif choice == 3:
+            pass
+     
+        else:
+            print("Error, invalid input. ")
 
 
