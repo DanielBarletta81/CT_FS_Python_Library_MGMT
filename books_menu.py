@@ -15,6 +15,10 @@ class Book:
         self.title = title
         self.date_published = date_published
         self.isAvailable = isAvailable
+
+#Apply encapsulation principles by defining private attributes 
+# and using getters and setters for necessary data access.
+
     # getters and setters
     def get_genre(self):
         return self.__genre

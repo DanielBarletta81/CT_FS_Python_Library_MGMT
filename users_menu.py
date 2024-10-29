@@ -18,6 +18,12 @@ class User:
         self.__bookList = bookList
 
     # getters and setters
+    
+   # Encapsulation:
+
+#Apply encapsulation principles by defining private attributes and using 
+# getters and setters for necessary data access.
+
 
     def get_library_id(self):
         return self.__library_id

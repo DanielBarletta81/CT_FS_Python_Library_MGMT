@@ -11,8 +11,14 @@ class Author:
         self.__name = name
       
         self.__biography = biography
-     
-    # getters and setters
+
+   #     Encapsulation:
+
+#Apply encapsulation principles by defining private attributes 
+# and using getters and setters for necessary data access.
+
+      # getters and setters
+   
     def get_name(self):
         return self.__name
 
