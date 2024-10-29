@@ -20,7 +20,7 @@ def bookMenu():
 
         choice = int(input("What would you like to do (1-6)? "))
 
-        if choice == 4:
+        if choice == 6:
             return
         elif choice == 1:
             pass
@@ -28,7 +28,10 @@ def bookMenu():
             pass
         elif choice == 3:
             pass
-     
+        elif choice == 4:
+            pass
+        elif choice == 5:
+            pass
         else:
             print("Error, invalid input. ")
 
