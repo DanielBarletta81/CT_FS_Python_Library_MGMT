@@ -22,6 +22,20 @@ def main():
      print("\n 3. Author Operations. ")
      print("\n 4. Quit. ")
 
+     choice = int(input("Please choose a menu. "))
+
+     if choice == 4:
+        return
+     elif choice == 1:
+        pass
+     elif choice == 2:
+        pass
+     elif choice == 3:
+        pass
+     
+     else:
+        print("Error, invalid input. ")
+
 
 main()   
 
