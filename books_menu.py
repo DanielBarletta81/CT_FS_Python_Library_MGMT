@@ -5,3 +5,27 @@
  #       3. Return a book
   #      4. Search for a book
     #    5. Display all books
+
+class Book:
+  
+    def __init__(self, title, genre, author, date_published, isAvailable):
+        #make private attributes for genre and author
+        self.__genre = genre
+        self.__author = author
+        self.title = title
+        self.date_published = date_published
+        self.isAvailable = isAvailable
+    # getters and setters
+    def get_genre(self):
+        return self.__genre
+
+    def set_genre(self, new_genre):
+        self.__genre = new_genre
+
+    def get_author(self):
+        return self.__author
+
+    def set_author(self, new_author):
+        self.__author = new_author
+
+
