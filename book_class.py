@@ -12,7 +12,7 @@ class Book:
         self.__title = title
         self.__author = author
         self.__date_published = date_published
-        self.__isAvailable = isAvailable
+        self.__isAvailable = True
 
 #Apply encapsulation principles by defining private attributes 
 # and using getters and setters for necessary data access.
@@ -49,7 +49,7 @@ class Book:
     def set_isAvailable(self, new_isAvailable):
         self.__isAvailable = new_isAvailable
 
-        
+
 
 class Catalog:
     def __init__(self):

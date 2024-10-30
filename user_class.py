@@ -2,14 +2,15 @@
 # Establish class for User
 
 # Menu Actions needed:
-#Adding a new user with user details.
+#Adding a new user with user details. check
 #Viewing user details.
-#Displaying a list of all users.
+#Displaying a list of all users. check
 
 class User:
   
     def __init__(self, library_id, first_name, last_name, username, password, bookList):
-        #make private attributes for author name and username, password
+        #make private attributes 
+        self.users_list = []
         self.__library_id = library_id
         self.__first_name = first_name
         self.__last_name = last_name
@@ -62,5 +63,20 @@ class User:
     def set_bookList(self, new_bookList):
         self.__bookList = new_bookList
 
+    def add_user(self, library_id, first_name, last_name, username, password):
+        new_user = (library_id, first_name, last_name, username, password)
+        self.users_list.append(new_user)
+        print(self.items)
 
+    def get_user_details(self, library_id):
+        if library_id:
+            print(User)
+
+
+    def display_users(self):
+       
+        print("Current Users:")
+        for user in self.users_list:
+            if user:
+                print(user)
 
