@@ -1,17 +1,4 @@
-## errors.py
-
-# class CustomError(Exception):
-#    """Base class for custom exceptions."""
-#    pass
-
-# class InvalidInputError(CustomError):
-#   """Raised when the input value is invalid."""
-#   pass
-
-# class DatabaseConnectionError(CustomError):
-#    """Raised when there's an error connecting to the database."""
-#    pass
-
+## Module for error handling
 
 
 class CustomError(Exception):
