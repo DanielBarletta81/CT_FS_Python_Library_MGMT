@@ -9,4 +9,4 @@ class InputError(CustomError):
     pass
 
 def handle_error(error):
-    print(f'Unfortunately, an error occurred {error}')
+    print(f'Unfortunately, an error occurred: {error}')

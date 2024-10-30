@@ -17,7 +17,7 @@
 #Searching for a book by its unique identifier (title) and displaying its details.
 #Displaying a list of all books with their unique identifiers.
 
-from classes import Book
+from book_class import Book
 
 def bookMenu():
      while True:
@@ -40,41 +40,30 @@ def bookMenu():
             
 
             if choice == 1:
-                genre = int(input("Enter new book genre: "))
-                title = input("Enter book title: ")
-                author = int(input("Enter author id: "))
-                date_published = input("Enter publication date: ")
+                pass
                 
        
             elif choice == 2:
-                isbn = input('Enter the ISBN of the book: ')
+                pass
                 
                 
 
             elif choice == 3:
-                print(Book.book_list)
+               pass
                 
 
 
             elif choice == 4:
                 
-                user_id = int(input("Enter user id for borrowed book: "))
-                book_id = int(input("Enter book id for borrowed book: "))
-                borrow_date = input("What date was book borrowed? ")
-                borrow_book(cursor, id, user_id, book_id, borrow_date)
-                conn.commit()
-                
+                pass
        
             elif choice == 5:
+                pass
                
-                user_id = int(input("Enter user id for returned book: "))
-                book_id = int(input("Enter book id for returned book: "))
-                return_date = input("What date was book returned? ")
+  #      user_id = int(input("Enter user id for returned book: "))
+   #     book_id = int(input("Enter book id for returned book: "))
+    #    return_date = input("What date was book returned? ")
                 
-                
-       
-            else:
-                 print("Invalid selection, please try again.")
 
         except Exception as e:
-            print(f"An exception occurred: {e}")
+                 print(f"An exception occurred: {e}")
