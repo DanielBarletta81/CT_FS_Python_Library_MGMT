@@ -32,14 +32,16 @@ class Author:
 
 
 class Book:
+
+    book_list = []
   
     def __init__(self, title, genre, author, date_published, isAvailable):
         #make private attributes for genre and author
         self.__genre = genre
+        self.__title = title
         self.__author = author
-        self.title = title
-        self.date_published = date_published
-        self.isAvailable = isAvailable
+        self.__date_published = date_published
+        self.__isAvailable = isAvailable
 
 #Apply encapsulation principles by defining private attributes 
 # and using getters and setters for necessary data access.
@@ -50,12 +52,30 @@ class Book:
 
     def set_genre(self, new_genre):
         self.__genre = new_genre
+    
+    def get_title(self):
+        return self.__title
+
+    def set_title(self, new_title):
+        self.__title = new_title
 
     def get_author(self):
         return self.__author
 
     def set_author(self, new_author):
         self.__author = new_author
+
+    def get_date_published(self):
+        return self.__date_published
+
+    def set_date_published(self, new_date_published):
+        self.__date_published = new_date_published
+
+    def get_isAvailable(self):
+        return self.__isAvailable
+
+    def set_isAvailable(self, new_isAvailable):
+        self.__isAvailable = new_isAvailable
 
 
 class User:
