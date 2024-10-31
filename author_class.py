@@ -9,6 +9,13 @@ class Author:
       
         self.__biography = biography
 
+# Menu Actions needed:
+#Adding a new author with author details. 
+#Viewing author details.
+#Displaying a list of all authors. 
+
+
+
    #     Encapsulation:
 
 #Apply encapsulation principles by defining private attributes 
@@ -27,3 +34,21 @@ class Author:
 
     def set_biography(self, new_biography):
         self.__biography = new_biography
+
+
+    def add_author(self, library_id, first_name, last_name, authorname, password):
+        new_author = (library_id, first_name, last_name, authorname, password)
+        self.authors_list.append(new_author)
+        print(self.items)
+
+    def get_author_details(self, library_id):
+        if library_id:
+            print(author)
+
+
+    def display_authors(self):
+       
+        print("Current authors:")
+        for author in self.authors_list:
+            if author:
+                print(author)

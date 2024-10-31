@@ -1,5 +1,9 @@
+## main entry point
+
 # 1. Create an improved, user-friendly command-line interface (CLI) for the Library Management
 #  System with separate menus for each class of the system.
+from books_menu import bookMenu
+from users_menu import userMenu
 
 
 """     Welcome to the Library Management System!
@@ -29,9 +33,9 @@ def main():
      if choice == 4:
         return
      elif choice == 1:
-        pass
+        bookMenu()
      elif choice == 2:
-        pass
+        userMenu()
      elif choice == 3:
         pass
      
@@ -40,5 +44,3 @@ def main():
 
 
 main()   
-
-
