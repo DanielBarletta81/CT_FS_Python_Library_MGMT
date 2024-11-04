@@ -1,4 +1,4 @@
-from user_class import User
+from user_class import add_user, get_user_details, display_users
 # 
 #          User Operations:
         
@@ -9,6 +9,7 @@ from user_class import User
 #
 #
 def userMenu():
+     user_list = []
      while True:
     
         print("***  Welcome to the Library's User Menu!  ***")
@@ -24,16 +25,16 @@ def userMenu():
             return
         
         elif choice == 1:
-           
-            User.add_user()
+          add_user(user_list)
                 
        
         elif choice == 2:
-            User.get_user_details()
+          input_library_id = int(input("Enter the library id to get user details: "))
+          get_user_details(user_list, input_library_id)
                 
                 
 
         elif choice == 3:
-            User.display_users()
+            display_users(user_list)
                 
                

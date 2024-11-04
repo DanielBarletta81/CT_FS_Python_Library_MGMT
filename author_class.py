@@ -38,19 +38,21 @@ class Author:
         self.__biography = new_biography
 
 
-    def add_author(self, , biography):
-        new_author = 
-        self.authors_list.append(new_author)
-        print(self.items)
+def add_author(author_list):
+    author_id = int(input("What's the new Library Id #? "))
+    author_name = input("What's the new member's name? ")
+    biography = input("Please provide a short biography: ")
+    
+    author_list.append(Author(author_id, author_name, biography)) 
 
-    def get_author_details(self, library_id):
-        if library_id:
+def get_author_details(author_id):
+        if author_id:
             print(f'Details for selected author: ')
 
 
-    def display_authors(self):
+def display_authors(author_list):
        
         print("Current authors:")
-        for author in self.authors_list:
+        for author in author_list:
             if author:
                 print(author)
