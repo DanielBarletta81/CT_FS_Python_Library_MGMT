@@ -9,6 +9,8 @@ class Author:
       
         self.__biography = biography
 
+
+
 # Menu Actions needed:
 #Adding a new author with author details. 
 #Viewing author details.
@@ -36,14 +38,14 @@ class Author:
         self.__biography = new_biography
 
 
-    def add_author(self, library_id, first_name, last_name, authorname, password):
-        new_author = (library_id, first_name, last_name, authorname, password)
+    def add_author(self, , biography):
+        new_author = 
         self.authors_list.append(new_author)
         print(self.items)
 
     def get_author_details(self, library_id):
         if library_id:
-            print(author)
+            print(f'Details for selected author: ')
 
 
     def display_authors(self):

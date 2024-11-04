@@ -1,4 +1,4 @@
-from user_class import add_user
+from user_class import User
 # 
 #          User Operations:
         
@@ -18,21 +18,22 @@ def userMenu():
         print("\n 3. Display all users. ")
         print("\n 4. Return to Main Menu. ")
 
-        choice = int(input("What would you like to do (1-6)? "))
+        choice = int(input("What would you like to do (1-4)? "))
 
         if choice == 4:
             return
         
         elif choice == 1:
-            add_user()
+           
+            User.add_user()
                 
        
         elif choice == 2:
-            pass
+            User.get_user_details()
                 
                 
 
         elif choice == 3:
-            pass
+            User.display_users()
                 
                

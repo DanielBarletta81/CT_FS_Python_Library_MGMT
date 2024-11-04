@@ -8,12 +8,11 @@
 
 class User:
   
-    def __init__(self, library_id, first_name, last_name, username, password, bookList):
+    def __init__(self, library_id, member_name, username, password, bookList):
         #make private attributes 
         self.users_list = []
         self.__library_id = library_id
-        self.__first_name = first_name
-        self.__last_name = last_name
+        self.__member_name = member_name 
         self.__username = username
         self.__password = password
         self.__bookList = bookList
@@ -29,33 +28,27 @@ class User:
     def get_library_id(self):
         return self.__library_id
 
-    def set_library_id(self, new_library_id):
-        self.__library_id = new_library_id
+ #   def set_library_id(self, new_library_id):
+  #      self.__library_id = new_library_id
 
 
-    def get_first_name(self):
-        return self.__first_name
+    def get_member(self):
+        return self.__member_name
 
-    def set_first_name(self, new_first_name):
-        self.__first_name = new_first_name
-
-    def get_last_name(self):
-        return self.__last_name
-
-    def set_last_name(self, new_last_name):
-        self.__last_name = new_last_name
+  #  def set_member(self, new_member_name):
+  #      self.__member_name = new_member_name
 
     def get_username(self):
         return self.__username
 
-    def set_username(self, new_username):
-        self.__username = new_username
+  #  def set_username(self, new_username):
+  #      self.__username = new_username
 
     def get_password(self):
         return self.__password
 
-    def set_password(self, new_password):
-        self.__password = new_password
+  #  def set_password(self, new_password):
+   #     self.__password = new_password
 
     def get_bookList(self):
         return self.__bookList
@@ -63,20 +56,33 @@ class User:
     def set_bookList(self, new_bookList):
         self.__bookList = new_bookList
 
-    def add_user(self, library_id, first_name, last_name, username, password):
-        new_user = (library_id, first_name, last_name, username, password)
-        self.users_list.append(new_user)
-        print(self.items)
-
-    def get_user_details(self, library_id):
-        if library_id:
-            print(User)
+        #user functions below  VVVV
 
 
-    def display_users(self):
+def add_user(new_user):
+    library_id = int(input("What's the new Library Id #? "))
+    member_name = input("What's the new member's name? ")
+    username = input("Please create a username. ")
+    password= input("Please create a secure password: ")
+        
+
+    new_user[library_id] = User(library_id, member_name, username, password, bookList=[])
+        
+        
+    print(f'New user added: {new_user}')
+
+def get_user_details(self, library_id):
+        library_id = int(input("Enter the library id to get user details: "))
+        if library_id == self.__library_id:
+             print(f'User found!')
+            
+
+
+
+def display_users(self):
        
-        print("Current Users:")
-        for user in self.users_list:
+    print("Current Users:")
+    for user in self.users_list:
             if user:
                 print(user)
 

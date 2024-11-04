@@ -4,7 +4,7 @@
 #  System with separate menus for each class of the system.
 from books_menu import bookMenu
 from users_menu import userMenu
-
+from authors_menu import authorMenu
 
 """     Welcome to the Library Management System!
 
@@ -28,7 +28,7 @@ def main():
      print("\n 3. Author Operations. ")
      print("\n 4. Quit. ")
 
-     choice = int(input("Please choose a menu. "))
+     choice = int(input("Please choose an option. "))
 
      if choice == 4:
         return
@@ -37,7 +37,8 @@ def main():
      elif choice == 2:
         userMenu()
      elif choice == 3:
-        pass
+        authorMenu()
+        
      
      else:
         print("Error, invalid input. ")
