@@ -69,7 +69,7 @@ def add_user(user_list):
 
 def get_user_details(user_list, library_id):
         
-        if library_id == user_list[library_id]:
+        if library_id in user_list:
              print(f'User found! {user_list[library_id]}')
         else:
              print(f'User with id: {library_id} not found!')
