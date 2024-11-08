@@ -89,6 +89,8 @@ def check_in_book(library, current_loans):
 
 
 def bookMenu():
+     library = {}
+     current_loans = {}
      while True:
     
         print("***  Welcome to the Library's Book Menu!  ***")
@@ -109,8 +111,7 @@ def bookMenu():
             
 
             if choice == 1:
-                catalog = Catalog()
-                catalog.add_book(book="")
+               add_book(library)
                 
        
             elif choice == 2:

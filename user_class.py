@@ -8,14 +8,14 @@
 
 class User:
   
-    def __init__(self, library_id, member_name, username, password, bookList):
+    def __init__(self, library_id, member_name, username, password):
         #make private attributes 
        
         self.__library_id = library_id
         self.__member_name = member_name 
         self.__username = username
         self.__password = password
-        self.__bookList = bookList
+       
 
     # getters and setters
     
@@ -50,12 +50,6 @@ class User:
   #  def set_password(self, new_password):
    #     self.__password = new_password
 
-    def get_bookList(self):
-        return self.__bookList
-
-    def set_bookList(self, new_bookList):
-        self.__bookList = new_bookList
-
         #user functions below  VVVV
 
 
@@ -64,7 +58,9 @@ def add_user(user_list):
     member_name = input("What's the new member's name? ")
     username = input("Please create a username. ")
     password= input("Please create a secure password: ")
-    user_list.append(User(library_id, member_name, username, password, bookList= [])) 
+    user_list[library_id] = User(library_id, member_name, username, password)
+
+    print(f'User added! Current list of users: {user_list}')
 
 
 def get_user_details(user_list, library_id):
@@ -84,3 +80,43 @@ def display_users(user_list):
             if user:
                 print(f'User id: {user.get_library_id()} \n Member name: {user.get_member()}')
 
+
+# 
+#          User Operations:
+        
+#           1. Add a new user
+ #          2. View user details
+ #          3. Display all users
+#
+#
+#
+def userMenu():
+     user_list = {}
+     while True:
+    
+        print("***  Welcome to the Library's User Menu!  ***")
+        print("\n Menu: ")
+        print("\n 1. Add a user. ")
+        print("\n 2. View user information. ")
+        print("\n 3. Display all users. ")
+        print("\n 4. Return to Main Menu. ")
+
+        choice = int(input("What would you like to do (1-4)? "))
+
+        if choice == 4:
+            return
+        
+        elif choice == 1:
+          add_user(user_list)
+                
+       
+        elif choice == 2:
+          input_library_id = int(input("Enter the library id to get user details: "))
+         
+                
+                
+
+        elif choice == 3:
+            display_users(user_list)
+                
+               
