@@ -78,7 +78,7 @@ def display_users(user_list):
         print("Current users:")
         for user in user_list:
             if user:
-                print(f'user ID: {user} \n Username: {user_list[user].get_username()} \n {user_list[user].get_member}')
+                print(f'user ID: {user} \n Username: {user_list[user].get_username()} \n {user_list[user].get_member()}')
 
 
 
