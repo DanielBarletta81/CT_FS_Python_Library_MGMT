@@ -67,7 +67,7 @@ def add_book(library): # library will be a dictionary
         library[isbn] = Book(genre, title, author, isbn)
       
 
-def checkout_book(library, current_loans):
+def check_out_book(library, current_loans):
      isbn = input("Enter the ISBN of book being borrowed: ")
      user = input("Enter the user borrowing book: ")
      if isbn in library and library[isbn].borrow_book():
@@ -84,6 +84,17 @@ def check_in_book(library, current_loans):
           print(f'Book {library[isbn].get_title()} returned. ')
      else:
           print("The book ISBN is invalid or the book was not borrowed. ")
+
+
+def find_book(library):
+     isbn = input("Enter the ISBN of book to search library: ")
+     if isbn in library:
+          print(f'Book with ISBN {isbn} found! Title: {library[isbn].get_title()}')
+
+def display_entire_library(library):
+     for book in library:
+          print(f'{book.get_title()}')
+          
 
 ## add Book menu
 
@@ -111,28 +122,23 @@ def bookMenu():
             
 
             if choice == 1:
-               add_book(library)
+                add_book(library)
                 
        
             elif choice == 2:
-                
-                pass
+                check_out_book(library, current_loans)
                 
 
             elif choice == 3:
-               pass
+                check_in_book(library, current_loans)
                 
-
 
             elif choice == 4:
-                
-                pass
+                find_book(library)
        
             elif choice == 5:
-               pass
+                display_entire_library(library)
                
-
-                
 
         except Exception as e:
                  print(f"An exception occurred: {e}")
