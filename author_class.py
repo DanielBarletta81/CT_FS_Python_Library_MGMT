@@ -34,20 +34,22 @@ class Author:
     def get_biography(self):
         return self.__biography
 
-    def set_biography(self, new_biography):
-        self.__biography = new_biography
 
 
 def add_author(author_list):
-    author_id = int(input("What's the new Library Id #? "))
-    author_name = input("What's the new member's name? ")
+    author_id = int(input("What's the new Author Id #? "))
+    author_name = input("What's the new author's name? ")
     biography = input("Please provide a short biography: ")
-    
-    author_list.append(Author(author_id, author_name, biography)) 
+    author_list[author_id] = Author(author_id, author_name, biography)
 
-def get_author_details(author_id):
-        if author_id:
-            print(f'Details for selected author: ')
+    print(f' New author added:  {author_name}')
+    
+     
+
+def get_author_details(author_id, author_list):
+        author = Author()
+        if author_id in author_list:
+            print(f'Details for selected author: {author.__name} ')
 
 
 def display_authors(author_list):
@@ -63,6 +65,7 @@ def display_authors(author_list):
         3. Display all authors """
 
 def authorMenu():
+     author_list = {}
      while True:
     
         print("***  Welcome to the Library's Author Menu!  ***")
@@ -78,7 +81,7 @@ def authorMenu():
             return
         
         elif choice == 1:
-            pass
+            add_author(author_list)
                 
         elif choice == 2:
             pass
