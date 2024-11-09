@@ -28,11 +28,12 @@ class Book:
 
     
   
-    def __init__(self, title, genre, author, isbn):
+    def __init__(self, title, author, genre, isbn):
         #make private attributes for genre and author
-        self.__genre = genre
+        
         self.__title = title
         self.__author = author
+        self.__genre = genre
         self.__isbn = isbn
         
         self.__isAvailable = True
@@ -60,11 +61,12 @@ class Book:
 
 
 def add_book(library): # library will be a dictionary
-        genre = input("Enter the book genre: ")
+        
         title = input("Enter the book title: ")
         author = input("Enter the author's name: ")
+        genre = input("Enter the book genre: ")
         isbn = input("Enter the ISBN: ")
-        library[isbn] = Book(genre, title, author, isbn)
+        library[isbn] = Book( title, author, genre, isbn)
       
 
 def check_out_book(library, current_loans):
@@ -93,7 +95,7 @@ def find_book(library):
 
 def display_entire_library(library):
      for book in library:
-          print(f'{book.get_title()}')
+          print(f' ISBN: {book} \n Title: {library[book].get_title()} \n')
           
 
 ## add Book menu
