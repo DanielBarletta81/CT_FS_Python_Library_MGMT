@@ -8,10 +8,10 @@
 
 class User:
   
-    def __init__(self, library_id, member_name, username, password):
+    def __init__(self, user_id, member_name, username, password):
         #make private attributes 
        
-        self.__library_id = library_id
+        self.__user_id = user_id
         self.__member_name = member_name 
         self.__username = username
         self.__password = password
@@ -25,8 +25,8 @@ class User:
 # getters and setters for necessary data access.
 
 
-    def get_library_id(self):
-        return self.__library_id
+    def get_user_id(self):
+        return self.__user_id
 
  #   def set_library_id(self, new_library_id):
   #      self.__library_id = new_library_id
@@ -54,31 +54,32 @@ class User:
 
 
 def add_user(user_list):
-    library_id = int(input("What's the new Library Id #? "))
-    member_name = input("What's the new member's name? ")
-    username = input("Please create a username. ")
-    password= input("Please create a secure password: ")
-    user_list[library_id] = User(library_id, member_name, username, password)
+    user_id = int(input("What's the new user Id #? "))
+    member = input("Enter the name on account: ")
+    user_name = input("Please create a username: ")
+    password = input("Enter a secure password: ")
+    
+   
+    user_list[user_id] = User(user_id, member, user_name, password)
 
-    print(f'User added! Current list of users: {user_list}')
+    print(f' New user added:  {user_name}')
+    
+     
 
-
-def get_user_details(user_list, library_id):
-        
-        if library_id in user_list:
-             print(f'User found! {user_list[library_id]}')
-        else:
-             print(f'User with id: {library_id} not found!')
+def get_user_details(user_list):
+        user_id = int(input("Please enter the user id: "))
+        if user_id in user_list:
+            print(f'Details for selected user: Username: {user_list[user_id].get_username()} Member: {user_list[user_id].get_member()}') 
             
-
 
 
 def display_users(user_list):
        
-    print("Current Users:")
-    for user in user_list:
+        print("Current users:")
+        for user in user_list:
             if user:
-                print(f'User id: {user.get_library_id()} \n Member name: {user.get_member()}')
+                print(f'user ID: {user} \n Username: {user_list[user].get_username()} \n {user_list[user].get_member}')
+
 
 
 # 
@@ -111,11 +112,9 @@ def userMenu():
                 
        
         elif choice == 2:
-          input_library_id = int(input("Enter the library id to get user details: "))
+          display_users(user_list)
          
                 
-                
-
         elif choice == 3:
             display_users(user_list)
                 
